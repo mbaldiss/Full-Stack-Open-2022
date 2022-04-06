@@ -1,0 +1,7 @@
+title 0.4: new note
+
+note right of Browser: The user fills out the form and submits it.
+Browser->Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+note left of Server: The server processes the data and responds with a new list.
+Server->Browser: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+note right of Browser: The user is redirected to the same page but with the new information included.
