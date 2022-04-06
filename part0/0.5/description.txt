@@ -1,0 +1,6 @@
+title 0.5: Single Page Application
+
+note right of Browser: The user fills out the form and submits it.
+Browser->Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/spa
+note left of Server: The server processes the data and renders the same page with a new list.
+Server->Browser: https://studies.cs.helsinki.fi/exampleapp/spa
