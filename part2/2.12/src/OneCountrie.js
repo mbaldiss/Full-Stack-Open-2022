@@ -1,6 +1,8 @@
+import Weather from './Weather';
 
 const OneCountrie = (props) => {
     const lang = Object.values(props.filtered[0].languages);
+
     return (
       <div>
         <h1>{props.filtered[0].name.common}</h1>
@@ -11,6 +13,7 @@ const OneCountrie = (props) => {
           <p>{lang.map(language => <li key={language}>{language}</li>)}</p>  
         </ul>
         <img alt={props.filtered[0].name.common} src={props.filtered[0].flags.png}/>
+        <Weather capital={props.filtered[0].capital}/>
       </div>
       );
 }

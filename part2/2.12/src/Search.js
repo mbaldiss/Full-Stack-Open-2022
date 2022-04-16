@@ -4,10 +4,11 @@ import MoreCountries from './MoreCountries';
 
 const Search = (props) => {
     const [search, setSearch] = useState("");
-    let filtered = props.countries.filter(item => item.name.common.toLowerCase().includes(search.toLowerCase()));
+    
     const result = (event) => {
         setSearch(event.target.value);
     } 
+    let filtered = props.countries.filter(item => item.name.common.toLowerCase().includes(search.toLowerCase()));
         if(filtered.length === 1){
             return (
               <div>      

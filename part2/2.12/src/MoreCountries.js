@@ -17,7 +17,7 @@ const MoreCountries = (props) => {
     }else{
         return (
             <div>
-                {more.map((countrie) => {
+                {props.filtered.map((countrie) => {
                   return <div key={countrie.name.common}>{countrie.name.common} <button onClick={() => {
                     setMore([countrie]);
                   }}>show</button></div>;
