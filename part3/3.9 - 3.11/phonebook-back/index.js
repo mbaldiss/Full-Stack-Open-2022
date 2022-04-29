@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const cors = require('cors');
 
 app.use(cors());
-
+app.use(express.static('build'))
 app.use(express.json());
 
 morgan.token('body', request => JSON.stringify(request.body));
@@ -66,7 +66,12 @@ app.post('/api/persons', (request, response) => {
             error: 'name must be unique'
         })
     }
-  const maxId = Math.max(...persons.map(person => person.id));
+
+  let maxId = 0;
+  if(persons.length !== 0){
+    maxId = Math.max(...persons.map(person => person.id));
+  }
+
   const person = {
     id: maxId + 1,
     name: body.name,
