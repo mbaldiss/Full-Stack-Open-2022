@@ -12,8 +12,8 @@ const createNote = newObject => {
     return request.then(response => response.data);
 };
 
-const updateNote = ({id, newObject}) => {
-    const request = axios.put(`${baseUrl}/${id}`, newObject);
+const updateNote = updatedNote => {
+    const request = axios.put(`${baseUrl}/${updatedNote.id}`, updatedNote);
     return request.then(response => response.data);
 }
 

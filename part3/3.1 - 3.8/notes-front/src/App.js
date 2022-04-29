@@ -22,7 +22,7 @@ function App() {
     };
 
     conect
-      .updateNote(noteTo.id, updatedNote)
+      .updateNote(updatedNote)
       .then(updatedNotes => {
         setNotes(notes.map(note => {
           if(note.id === noteTo.id){
@@ -45,8 +45,6 @@ function App() {
 
   const createNote = () => {
     let newNote = prompt('Insert a new note (importance is random)');
-    let maxId = Math.max(...notes.map(note => note.id));
-    const randomImportance = Math.random() > .5 ? true : false;
 
     if(newNote === null){
       return null;
@@ -54,9 +52,7 @@ function App() {
       alert("Please enter a valid note")
     }else{
       newNote = {
-        content: newNote,
-        important: randomImportance,
-        id: maxId + 1
+        content: newNote
       }
       conect
         .createNote(newNote)
@@ -70,7 +66,7 @@ function App() {
 
   return (
     <div>
-      <h1 style={{color: 'green'}}>Note´s System</h1>
+      <h1 style={{color: 'green'}}>Note´s System v1</h1>
       <button onClick={() => createNote()}>Create Note</button>
       <h1>All notes</h1>
       <ul>
