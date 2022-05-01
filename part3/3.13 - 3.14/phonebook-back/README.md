@@ -1,1 +1,1 @@
-https://dashboard.heroku.com/apps/secret-spire-70068
+https://secret-spire-70068.herokuapp.com/
