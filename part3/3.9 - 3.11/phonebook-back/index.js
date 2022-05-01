@@ -38,6 +38,7 @@ app.put('/api/persons/:id', (request, response) => {
 
 app.get('/api/info', (request, response) => {
     const date = new Date();
+    console.log("asd")
     response.send(`Phonebook has info for ${persons.length} people.<br/> ${date}`);
 })
 
