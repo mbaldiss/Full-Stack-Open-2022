@@ -1,0 +1,6 @@
+DELETE http://localhost:3001/api/notes/626eed1c7107b97c0e3e2e4e
+Content-Type: application/json
+
+{
+    "id": "626eed1c7107b97c0e3e2e4e"
+}
